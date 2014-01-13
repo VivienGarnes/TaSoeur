@@ -16,7 +16,11 @@
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Contacter ta Soeur", contact_path %></li>
       <% if user_signed_in? %>
-      <li><%= link_to 'New Pin', new_pin_path %></li>
+        <li>
+            <%= link_to new_pin_path do %>
+              <span class="glyphicon glyphicon-plus"></span> New Pin
+            <% end %>
+        </li>
       <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
       <li><%= link_to "Réglages", edit_user_registration_path %></li>
       <% else %>
