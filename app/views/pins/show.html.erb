@@ -1,19 +1,31 @@
 <%= link_to 'Back', pins_path %>
-
 <div class="row">
   <div class="col-md-offset-2 col-md-8">
     <div class="panel panel-default">
+      <div class="panel-body center">
+        <h2><%= @pin.description %></h2>
+      </div>
       <div class="panel-heading center">
         <%= image_tag @pin.image.url(:medium) %>
       </div>
       <div class="panel-body">
-        <p><%= @pin.description %></p>
-        <p><strong><%= @pin.user.name if @pin.user %></strong></p>
+        <p>Paroles de sagesses par <strong><%= @pin.user.name if @pin.user %> </strong>
         <%= link_to edit_pin_path(@pin) do %>
           <span class="glyphicon glyphicon-edit"></span>
           Edit
         <% end %>
+        </p>
       </div>
     </div>
-  </div>
+    <div class="panel panel-body center">
+      <h3>Vote pour ta soeur</h3>
+      <span class="glyphicon glyphicon-circle-arrow-up"></span>
+      Elle prend cher 
+      (<%= @pin.upvotes.size %>) 
+      Nique sa mère 
+      <span class="glyphicon glyphicon-circle-arrow-down">
+    </div>
+    <div class="panel panel-body">
+      Comments will go here
+    </div>
 </div>

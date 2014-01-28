@@ -8,6 +8,8 @@ class PinsController < ApplicationController
  end
 
   def show
+    @pin = Pin.find params[:id]
+    @pin.liked_by current_user
   end
 
   def new
