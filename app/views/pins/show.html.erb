@@ -19,11 +19,11 @@
     </div>
     <div class="panel panel-body center">
       <h3>Vote pour ta soeur</h3>
-      <span class="glyphicon glyphicon-circle-arrow-up"></span>
-      Elle prend cher 
+        <%= link_to 'Elle prend cher', upvote_pin_path(@pin), method: :post %>
+            <span class="glyphicon glyphicon-circle-arrow-up"></span>
       (<%= @pin.upvotes.size %>) 
-      Nique sa mère 
-      <span class="glyphicon glyphicon-circle-arrow-down">
+      <%= link_to 'Nique sa mère', downvote_pin_path(@pin), method: :post %>
+        <span class="glyphicon glyphicon-circle-arrow-down"></span>
     </div>
     <div class="panel panel-body">
       Comments will go here

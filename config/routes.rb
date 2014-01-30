@@ -21,12 +21,13 @@ Pinteresting::Application.routes.draw do
   #   resources :products
 
   # Example resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
+  resources :pins do 
+    member do 
+      post :upvote
+      post :downvote
+    end
+  end
+
   #     collection do
   #       get 'sold'
   #     end

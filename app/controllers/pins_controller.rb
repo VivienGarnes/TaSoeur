@@ -19,6 +19,18 @@ class PinsController < ApplicationController
   def edit
   end
 
+  def upvote
+    @pin = Pin.find params[:id]
+    @pin.liked_by @current_user
+    redirect_to pin_path(@pin)
+  end
+
+  def downvote
+    @pin = Pin.find params[:id]
+    @pin.downvote_from @current_user
+    redirect_to pin_path(@pin)
+  end
+
   def create
     @pin = current_user.pins.build(pin_params)
 
