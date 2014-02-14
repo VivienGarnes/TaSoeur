@@ -15,17 +15,15 @@
           Edit
         <% end %>
         </p>
+        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
       </div>
     </div>
     <div class="panel panel-body center">
       <h3>Vote pour ta soeur</h3>
-        <%= link_to 'Elle prend cher', upvote_pin_path(@pin), method: :post %>
-            <span class="glyphicon glyphicon-circle-arrow-up"></span>
-      (<%= @pin.upvotes.size %>) 
-      <%= link_to 'Nique sa mère', downvote_pin_path(@pin), method: :post %>
+        <span class="glyphicon glyphicon-circle-arrow-up"></span>
+        <%= link_to 'Elle prend cher', upvote_pin_path(@pin), method: :post %> (<%= @pin.upvotes.size %>) 
+        <%= link_to 'Nique sa mère', downvote_pin_path(@pin), method: :post %> (<%= @pin.downvotes.size %>) 
         <span class="glyphicon glyphicon-circle-arrow-down"></span>
     </div>
-    <div class="panel panel-body">
-      Comments will go here
-    </div>
+    <div class="fb-comments" width="720px" data-href="http://tasoeur.fr/" data-numposts="10" data-colorscheme="light"></div>
 </div>
