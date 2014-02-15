@@ -1,4 +1,15 @@
-<%= link_to 'Back', pins_path %>
+<% if @prev %>
+<div <% if @next %>style="float:left;"<% end %>>
+  <span class="glyphicon glyphicon-circle-arrow-left"></span>
+  <%= link_to 'Précédent', pin_path(@prev), id: "prev-pin"%>
+</div>
+<% end %>
+<% if @next %>
+<div class="text-right">
+  <%= link_to 'Suivant', pin_path(@next), id: "next-pin" %>
+  <span class="glyphicon glyphicon-circle-arrow-right"></span>
+</div>
+<% end %>
 <div class="row">
   <div class="col-md-offset-2 col-md-8">
     <div class="panel panel-default">

@@ -10,6 +10,8 @@ class PinsController < ApplicationController
   def show
     @pin = Pin.find params[:id]
     @pin.liked_by current_user
+    @prev = Pin.where("id < #{@pin.id}").order(:id => :desc).first
+    @next = Pin.where("id > #{@pin.id}").order(:id => :asc).first
   end
 
   def new

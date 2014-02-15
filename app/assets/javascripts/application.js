@@ -15,3 +15,13 @@
 //= require bootstrap
 //= require masonry/jquery.masonry
 //= require_tree .
+
+$(function(){
+	$(window).keyup(function(e){
+		if(e.which==39 && $("#next-pin").length>0){
+			window.location=$("#next-pin").attr("href");
+		} else if(e.which==37 && $("#prev-pin").length>0){
+			window.location=$("#prev-pin").attr("href");
+		}
+	});
+});
