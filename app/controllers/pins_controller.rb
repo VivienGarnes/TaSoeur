@@ -35,7 +35,7 @@ class PinsController < ApplicationController
 
   def create
     @pin = current_user.pins.build(pin_params)
-
+    ImageCreator.create(@pin)
     respond_to do |format|
       if @pin.save
         format.html { redirect_to @pin, notice: 'Pin was successfully created.' }

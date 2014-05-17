@@ -18,6 +18,7 @@ gem 'masonry-rails', '~> 0.2.0'
 gem 'will_paginate', '~> 3.0'
 gem 'will_paginate-bootstrap'
 gem 'acts_as_votable', '~> 0.8.0'
+gem 'imgkit'
 
 group :development, :test do
 	gem 'sqlite3'

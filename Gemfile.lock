@@ -57,6 +57,7 @@ GEM
     execjs (2.0.2)
     hike (1.2.3)
     i18n (0.6.9)
+    imgkit (1.4.0)
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
@@ -156,6 +157,7 @@ DEPENDENCIES
   cocaine (~> 0.5.0)
   coffee-rails (~> 4.0.0)
   devise (~> 3.1.0.rc2)
+  imgkit
   jbuilder (~> 1.2)
   jquery-rails
   jquery-turbolinks
