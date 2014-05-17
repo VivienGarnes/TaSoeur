@@ -34,9 +34,9 @@ class PinsController < ApplicationController
 
   def create
     @pin = current_user.pins.build(pin_params)
-    ImageCreator.create(@pin)
     respond_to do |format|
       if @pin.save
+        ImageCreator.create(@pin) unless params[:pin]['image']
         format.html { redirect_to @pin, notice: 'Pin was successfully created.' }
         format.json { render action: 'show', status: :created, location: @pin }
       else

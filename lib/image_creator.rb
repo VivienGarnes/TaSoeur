@@ -3,7 +3,7 @@ class ImageCreator
     file = Tempfile.new(["template_#{pin.id.to_s}", '.png'], 'tmp', encoding: 'ascii-8bit')
     file.write(IMGKit.new(render('pins/tasoeur_vgt', pin), quality: 100, width: 500, height: 500).to_png)
     file.flush
-    pin.quote = file
+    pin.image = file
     pin.save
     file.unlink
   end
