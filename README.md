@@ -6,5 +6,9 @@ Jokes' input is either text or image based.
 - Text based jokes generate a .png image with a randomised color background.
 - Image based jokes allow a simple upload and comment form.
 
-By [Vivien Garnès](https://viviengarnes.com) with the much appreciated help of the incredible [Alexis Montagne](https://github.com/AlexisMontagne). 
+Users can :
+- Create an account / login / logout,
+- Upvote & downvote jokes,
+- Comment via Facebook.
 
+By [Vivien Garnès](https://viviengarnes.com) with the much appreciated help of the incredible [Alexis Montagne](https://github.com/AlexisMontagne). 
