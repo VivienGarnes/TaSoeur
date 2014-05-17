@@ -9,7 +9,6 @@ class PinsController < ApplicationController
 
   def show
     @pin = Pin.find params[:id]
-    @pin.liked_by current_user
     @prev = Pin.where("id < #{@pin.id}").order(:id => :desc).first
     @next = Pin.where("id > #{@pin.id}").order(:id => :asc).first
   end
@@ -23,13 +22,13 @@ class PinsController < ApplicationController
 
   def upvote
     @pin = Pin.find params[:id]
-    @pin.liked_by @current_user
+    @pin.liked_by current_user
     redirect_to pin_path(@pin)
   end
 
   def downvote
     @pin = Pin.find params[:id]
-    @pin.downvote_from @current_user
+    @pin.downvote_from current_user
     redirect_to pin_path(@pin)
   end
 
