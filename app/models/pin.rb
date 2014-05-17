@@ -4,5 +4,5 @@ class Pin < ActiveRecord::Base
 
   acts_as_votable
 
-  validates :description, presence: true
+  validates :description, presence: true, length: { maximum: 256 }
 end
